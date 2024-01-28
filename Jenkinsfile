@@ -10,7 +10,17 @@ environment {
     stages {
         stage("build") {
             steps {
-                sh 'mvn clean deploy'
+                echo "##########**&&&&---- Build Started Hissam-------&&&&***###########"
+                sh 'mvn clean deploy -Dmaven.test.skip=true'
+                echo "##########**&&&&----Build Completed Hissam-------&&&&***###########"
+            }
+        }
+
+        stage("test") {
+            steps {
+                 echo "##########**&&&&----Unit Test Started Hissam-------&&&&***###########"
+                sh 'mvn surefire-report:report'
+                 echo "##########**&&&&----Unit Test Completed Hissam-------&&&&***###########"
             }
         }
         stage('SonarQube analysis') {
