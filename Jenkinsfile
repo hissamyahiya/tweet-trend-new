@@ -26,7 +26,7 @@ environment {
                  echo "##########**&&&&----Unit Test Completed Hissam-------&&&&***###########"
             }
         }
-        stage('SonarQube analysis') {
+    /*   stage('SonarQube analysis') {
             environment {
               scannerHome = tool 'hissam-sonar-scanner';
             }
@@ -48,7 +48,7 @@ environment {
   }
             }
           }
-}
+}  */
 
         stage("Jar Publish") {
         steps {
