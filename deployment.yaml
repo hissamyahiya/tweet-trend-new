@@ -17,7 +17,7 @@ spec:
       - name: dockercred
       containers:
       - name:  valaxy-rtp
-        image: hissam01.jfrog.io/hissam-docker/ttrend:2.1.2
+        image: hissam01.jfrog.io/hissam-docker/ttrend:2.1.3
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
