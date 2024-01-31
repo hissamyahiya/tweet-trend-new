@@ -97,5 +97,12 @@ environment {
             }
         }
     }
+     stage ("Deploy Manifest") {
+        steps {
+            script {
+              sh './deploy.sh'
+            }
+        }
+     }
     }
 }
