@@ -97,10 +97,11 @@ environment {
             }
         }
     }
-     stage ("Deploy Manifest") {
+     stage ("Deploy using  helm") {
         steps {
             script {
-              sh './deploy.sh'
+                echo '<------------Helm Install started---------------->'
+              sh 'helm install ttrend ttrend-0.1.0.tgz'
             }
         }
      }
